@@ -1,0 +1,159 @@
+{% comment %}
+  Renders a header drawer menu for mobile and desktop.
+
+  Usage:
+  {% render 'header-drawer' %}
+{% endcomment %}
+
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+    <summary
+      class="header__icon header__icon--menu header__icon--summary link focus-inset"
+      aria-label="{{ 'sections.header.menu' | t }}"
+    >
+      <span>
+        {% render 'icon-hamburger' %}
+        {% render 'icon-close' %}
+      </span>
+    </summary>
+    <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
+      <div class="menu-drawer__inner-container">
+        <div class="menu-drawer__navigation-container">
+
+           <!-- =============== MENU HEADER ================-->
+
+           <div class="mobile_menu_bar">
+            <h2 class="bar_text">MENU</h2>
+            <button id="close-button"><img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Vector.svg?v=1702066407" alt="Close Menu"></button>
+           </div>
+           <div class="mobile_menu_header">
+            <h2 class="mobile_menu_h2">BUY 1 GET 1 FREE</h2>
+            <p class="mobile_menu_p">Rated 4.9/5 by +30,000 customers</p>
+            <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Icons.svg?v=1702058970" alt="Stars" class="mobile_menu_stars">
+          </div>
+          <nav class="menu-drawer__navigation">
+
+            <!-- ========== MENU LINKS ============== -->
+            <ul class="menu-drawer__menu has-submenu list-menu" role="list">
+              <li class="menu-item-with-image">
+                <a href="/collections/apple-watch-straps" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                <div class="image_link_menu">
+                <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Image_1.svg?v=1702057816" alt="Apple Watch Straps" class="menu-item-image">
+                  </div>
+                  APPLE WATCH STRAPS
+                  </div>
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/system-uicons_chevron-up-circle.svg?v=1702054076" alt="Chevron" class="menu-item-image">
+                  </div>
+                </a>
+              </li>
+              <li class="menu-item-with-image">
+                <a href="/collections/watch-covers" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                <div class="image_link_menu">
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Image_2.svg?v=1702057816" alt="Watch Covers" class="menu-item-image">
+                  </div>
+                  WATCH COVERS
+                  </div>
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/system-uicons_chevron-up-circle.svg?v=1702054076" alt="Chevron" class="menu-item-image">
+                  </div>
+                </a>
+              </li>
+              <li class="menu-item-with-image">
+                <a href="/collections/jewelry-sets" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                <div class="image_link_menu">
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Image_3.svg?v=1702057815" alt="JEWELRY SETS" class="menu-item-image">
+                  </div>
+                  JEWELRY SETS
+                  </div>
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/system-uicons_chevron-up-circle.svg?v=1702054076" alt="Chevron" class="menu-item-image">
+                  </div>
+                </a>
+              </li>
+              <li class="menu-item-with-image">
+                <a href="/collections/new-releases" class="menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                <div class="image_link_menu">
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Image_4.svg?v=1702057816" alt="NEW RELEASES" class="menu-item-image">
+                  </div>
+                  NEW RELEASES
+                  </div>
+                  <div class="menu-item-image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/system-uicons_chevron-up-circle.svg?v=1702054076" alt="Chevron" class="menu-item-image">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- ========== Other links container ========= -->
+
+          <div class="contact_links_container">
+            <div class="contact_links">
+              <a href="#">FAQs</a>
+              <a href="#">Contact Us</a>
+            </div>
+            <div class="contact_links">
+              <a href="#">Track Your Order</a>
+              <a href="#">Resize Straps</a>
+            </div>
+          </div>
+
+          <!-- ========= Features Container ======== -->
+
+          <div class="features-container">
+
+            <!-- Feature 1: Fits all Apple Watch models-->
+            <div class="feature-item">
+              <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Mask_group.svg?v=1702060996" alt="Fits all apple watch" class="feature-icon">
+              <p class="feature-text"> Fits all Apple<br>Watch models</p>
+            </div>
+
+            <!-- Feature 2: Money-Back Guarantee -->
+            <div class="feature-item">
+              <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Mask_group_1.svg?v=1702060996" alt="Money back guarantee" class="feature-icon">
+              <p class="feature-text">Money-Back<br>Guarantee</p>
+            </div>
+
+            <!-- Feature 3: +30,000 Happy Customers -->
+            <div class="feature-item">
+              <img src="https://cdn.shopify.com/s/files/1/0557/2961/9047/files/Icon.svg?v=1702060996" alt="Happy Customers" class="feature-icon">
+              <p class="feature-text">+30,000 Happy<br>Customers</p>
+            </div>
+
+          </div>
+
+          <!-- =========== SHOP NOW BUTTON ========== -->
+
+          <div class="shop_now_container">
+            <a href="collections/all" class="button_link">SHOP ALL PRODUCTS</a>
+
+            <p class="menu_footer_text">FREE SHIPPING ON ORDERS +$45.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>
+
+<!-- Function to close the Mobile Menu -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Retrieve the custom button element by its ID.
+  var customButton = document.getElementById('close-button');
+  
+  // Find the first element in the document with the class 'header__icon--menu'. This is assumed to be the summary element that needs to be clicked.
+  var summaryElement = document.querySelector('.header__icon--menu');
+
+  // Add an event listener for the 'click' event on the custom button.
+  customButton.addEventListener('click', function() {
+    // Programmatically trigger a click event on the summary element when the custom button is clicked. This simulates a user clicking on the summary element directly and can be used to toggle a menu or dropdown.
+    summaryElement.click(); 
+  });
+});
+
+</script>

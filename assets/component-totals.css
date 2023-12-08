@@ -1,0 +1,41 @@
+.totals {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.totals > * {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.totals * {
+  line-height: 1;
+}
+
+.totals > * + * {
+  margin-left: 2rem;
+}
+
+.totals__total {
+  margin-top: .5rem;
+  color: #0B0101;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.totals__total-value {
+  color: #0B0101;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cart__ctas + .totals {
+  margin-top: 2rem;
+}
+
+@media all and (min-width: 750px) {
+  .totals {
+    justify-content: flex-end;
+  }
+}
